@@ -6,15 +6,17 @@ public abstract class Vehiculo {
     protected String modelo;
     protected int anio;
     protected double capacidadCarga;
+    protected double kilometros;
     protected Sucursal sucursal;
     private VehiculoTipo tipo;
 
-    public Vehiculo(VehiculoTipo tipo, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal) {
+    public Vehiculo(VehiculoTipo tipo, String patente, Marca marca, String modelo, int anio, double capacidadCarga, Sucursal sucursal, double kilometros) {
         this.patente = patente;
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
         this.capacidadCarga = capacidadCarga;
+        this.kilometros = kilometros;
         this.sucursal = sucursal;
         this.tipo = tipo;
     }
@@ -29,6 +31,10 @@ public abstract class Vehiculo {
     
     public double getCapacidadCarga(){
         return capacidadCarga;
+    }
+    
+    public double getKilometros(){
+        return kilometros;
     }
     
     public int getAnio(){
@@ -48,6 +54,6 @@ public abstract class Vehiculo {
     }
     @Override
     public String toString() {
-        return patente + " - " + marca + " " + modelo + " - Sucursal: " + sucursal.getCodigo();
+        return marca.getNombre() + " - " + modelo + marca.getPais();
     }
 }

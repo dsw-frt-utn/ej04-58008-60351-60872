@@ -81,10 +81,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_listarVehiculoActionPerformed
 
     private void agregarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarVehiculoActionPerformed
-/*        AgregarVehiculo view = new ListarVehiculosView();
+        AgregarVehiculos view = new AgregarVehiculos();
         view.setVisible(true);
         this.setVisible(false);
-        */
     }//GEN-LAST:event_agregarVehiculoActionPerformed
 
     /**
