@@ -6,6 +6,7 @@ import domain.VehiculoTipo;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Optional;
+import domain.Sucursal;
 
 public class Controlador {
     
@@ -31,4 +32,12 @@ public class Controlador {
         }
         return new double[] {consumoElectricos, consumoCombustible};
     }
+    
+        public static void agregarVehiculo(Vehiculo v) {
+    Persistencia.getVehiculos().add(v);
+}
+     public static ArrayList<Sucursal> getSucursales() {
+    return Persistencia.getSucursales();
+}
+     
 }
